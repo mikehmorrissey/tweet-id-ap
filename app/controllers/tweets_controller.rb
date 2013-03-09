@@ -13,8 +13,11 @@ class TweetsController < ApplicationController
 			render @tweet
 		else
 			redirect_to action: "new"
+		end
 
 	end
 
 	def show
+		@tweet= Tweet.new(params[:tweet])
+	end
 end
