@@ -12,7 +12,7 @@ class TweetsController < ApplicationController
 			@tweet = t
 			redirect_to @tweet
 		else
-			render action: "new"
+			render action: 'new'
 		end
 
 	end
