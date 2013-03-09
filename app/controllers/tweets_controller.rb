@@ -5,7 +5,7 @@ class TweetsController < ApplicationController
 
 	def create
 		@tweet= Tweet.new(params[:tweet])
-		t =Tweet.where(tweet_id: params[:tweet][:tweet_id])
+		t =Tweet.find_by_tweet_id(params[:tweet][:tweet_id])
 		if @tweet.save
 			render @tweet
 		elsif t.exists?
