@@ -7,17 +7,17 @@ class TweetsController < ApplicationController
 		@tweet= Tweet.new(params[:tweet])
 		t =Tweet.find_by_tweet_id(params[:tweet][:tweet_id])
 		if @tweet.save
-			render @tweet
-		elsif t.exists?
+			redirect_to @tweet
+		elsif !t.nil?
 			@tweet = t
-			render @tweet
+			redirect_to @tweet
 		else
-			redirect_to action: "new"
+			render action: "new"
 		end
 
 	end
 
 	def show
-		@tweet= Tweet.new(params[:tweet])
+		@tweet= Tweet.find(params[:id])
 	end
 end
