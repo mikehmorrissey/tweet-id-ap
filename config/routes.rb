@@ -1,4 +1,8 @@
 TweetIdApp::Application.routes.draw do
+  resources :tweets, only: [:new, :create, :show]
+
+  root :to 'tweets#new'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
