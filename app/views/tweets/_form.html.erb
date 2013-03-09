@@ -1,0 +1,18 @@
+<%= form_for @tweet do |f|%>
+
+	<% if @tweet.errors.any?%>
+		<% errors.full_messages.each do |mes| %>
+			<div class="error"><%=mes%></div>
+		<% end %>
+	<%end%>
+
+
+	<div class= "field" >
+		<% t.label :tweet_id, "Tweet ID"%>
+		<% t.number_field :tweet %>
+	</div>
+
+	<div class = "submit">
+		<% t.submit%>
+	</div>
+<% end %>
