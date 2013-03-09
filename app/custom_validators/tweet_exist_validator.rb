@@ -1,6 +1,7 @@
 class TweetExistValidator < ActiveModel::EachValidator
 	def validate_each (object, attribute, value)
-		if Twitter.status(value).nil?
+		begin Twitter.status(value)
+		rescue Twitter::Error
 			object.errors[attribute] << "No Tweet exists with given ID"
 		end
 	end
