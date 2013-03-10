@@ -11,7 +11,7 @@
  *= require_self
  *= require_tree .
  */
-/* #FFA347 */
+
 html{background-color: rgba(110,190,90,1);}
 
 
@@ -27,7 +27,9 @@ html{background-color: rgba(110,190,90,1);}
 	
 	font-family: 'Raleway', sans-serif;
 	;
-}.submitbutton:hover {
+}
+
+.submitbutton:hover {
 	background-color: rgba(120,200,100,1)
 	
 	
@@ -62,6 +64,8 @@ html{background-color: rgba(110,190,90,1);}
 }
 
 .field {margin-bottom: 10%}
+
+
 /* title */
 .title {
 	color:black;
