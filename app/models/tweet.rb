@@ -1,7 +1,10 @@
 class Tweet < ActiveRecord::Base
   attr_accessible :pic_url, :text, :tweet_id, :user_name
+  
   before_save :parse_tweet
+  
   validates :tweet_id, presence: true, uniqueness: true, tweet_exist: true
+   
    def parse_tweet
    		t = Twitter.status(tweet_id)
    		self.user_name = t.from_user

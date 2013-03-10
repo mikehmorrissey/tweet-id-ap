@@ -114,7 +114,7 @@ input{
 
 #tweettext{
 	font-family: arial;
-	
+
 }
 
 #username {
@@ -133,4 +133,12 @@ input{
 	margin-left: 20%;
 	margin-bottom: 0
 }
-
+nav {
+	
+}
+.navlink {
+	padding: 3em;
+	text-decoration: none;
+	color:black;
+	font-family: 'Raleway', sans-serif;
+}

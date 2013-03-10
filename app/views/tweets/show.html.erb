@@ -1,12 +1,18 @@
 <% provide(:title, "#{@tweet.user_name}")%>
-<div id="maincontainer">
-<h1 class="title" id="tweettopper"> Tweet</h1>
-<div class= "showtweet">
-<div class="url"><img src=<%=@tweet.pic_url%>></div>
 
-<div id="textcontainer">
-<div id="username">@<%= @tweet.user_name%></div>
-<div id="tweettext"><%= @tweet.text%></div>
-</div>
-</div>
+<nav> 
+	<%= link_to "Find Tweet", root_path, class: "navlink"%></li>
+	
+	
+</nav>
+<div id="maincontainer">
+	<h1 class="title" id="tweettopper"> Tweet</h1>
+	<div class= "showtweet">
+		<div class="url"><img src=<%=@tweet.pic_url%>></div>
+
+		<div id="textcontainer">
+			<div id="username">@<%= @tweet.user_name%></div>
+			<div id="tweettext"><%= @tweet.text%></div>
+		</div>
+	</div>
 </div>
